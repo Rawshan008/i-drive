@@ -1,0 +1,61 @@
+/* Invention-regular  */
+
+@font-face {
+  font-family: 'Invention';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Invention-Regular.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('../fonts/Invention-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Invention-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/Invention-Regular.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Invention-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Invention-Regular.svg#Invention') format('svg');
+  /* Legacy iOS */
+}
+
+/* Invention-Bold  */
+@font-face {
+  font-family: 'Invention';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Invention-Bold.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('../fonts/Invention-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Invention-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/Invention-Bold.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Invention-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Invention-Bold.svg#Invention') format('svg');
+  /* Legacy iOS */
+}
+
+/* Invention-ExtraBold  */
+@font-face {
+  font-family: 'Invention';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/Invention-ExtraBold.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('../fonts/Invention-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Invention-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/Invention-ExtraBold.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Invention-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Invention-ExtraBold.svg#Invention') format('svg');
+  /* Legacy iOS */
+}
+
+
+/* Khand-Bold */
+@font-face {
+  font-family: 'Khand';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Khand-Bold.eot');
+  /* IE9 Compat Modes */
+  src: local(''), url('../fonts/Khand-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/Khand-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/Khand-Bold.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/Khand-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/Khand-Bold.svg#Khand') format('svg');
+  /* Legacy iOS */
+}

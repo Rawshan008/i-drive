@@ -1,0 +1,99 @@
+/*!
+Theme Name: I Dive
+Theme URI: #
+Author: Rawshan
+Author URI: #
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: i-dive
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+body {
+  font-family: "Invention", sans-serif;
+  font-weight: 400;
+  color: #5a5a5a;
+  line-height: 1.2;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Khand", sans-serif;
+  line-height: 1.2;
+}
+
+.ind-container {
+  width: 1170px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.site-header .header-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.site-header .header-content .header-search-form {
+  flex: 0 0 25%;
+  max-width: 100%;
+}
+.site-header .header-content .header-search-form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #ececec;
+  border-radius: 30px;
+}
+.site-header .header-content .header-site-meta {
+  flex: 0 0 50%;
+  max-width: 100%;
+  text-align: center;
+}
+.site-header .header-content .header-site-meta h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.site-header .header-content .header-site-meta h1 a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+.site-header .header-content .header-site-meta p {
+  margin: 0;
+  padding: 0;
+}
+.site-header .header-content .header-subscribe-btn {
+  flex: 0 0 25%;
+  max-width: 100%;
+  text-align: right;
+}
+.site-header .header-content .header-subscribe-btn button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #009791;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 30px;
+}
+.site-header .header-menu {
+  margin-top: 30px;
+}
+.site-header .header-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.site-header .header-menu ul a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  color: #5a5a5a;
+}
