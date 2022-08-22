@@ -13,7 +13,39 @@
     .header-search-form {
       flex: 0 0 25%;
       max-width: 100%;
-      @import '../components/header-search.scss';
+      form {
+        position: relative;
+        height: auto;
+        input {
+          width: 100%;
+          padding: 10px;
+          padding-left: 40px;
+          border: none;
+          background-color: #ececec;
+          border-radius: 30px;
+          box-sizing: border-box;
+        }
+        button {
+          background: transparent;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          color: #32373c;
+          display: block;
+          height: 20px;
+          position: absolute;
+          left: 6px;
+          top: 50%;
+          text-shadow: none;
+          line-height: 20px;
+          transform: translateY(-50%);
+          cursor: pointer;
+          svg {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
     }
 
     .header-site-meta {
@@ -98,31 +130,56 @@
   .header-2-search {
     background-color: $primary-color;
     padding: 5px 0px;
-    input {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 9px 10px;
-      border: none;
-      background-color: transparent;
-      color: $white-color;
-
-      &::-webkit-input-placeholder {
+    form {
+      position: relative;
+      height: auto;
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 9px 10px;
+        border: none;
+        background-color: transparent;
         color: $white-color;
+        padding-left: 40px;
+        &::-webkit-input-placeholder {
+          color: $white-color;
+        }
+        &::-moz-placeholder {
+          color: $white-color;
+        }
+        &::-ms-input-placeholder {
+          color: $white-color;
+        }
+        &::-moz-placeholder {
+          color: $white-color;
+        }
+        &::-moz-focus-inner {
+          outline-width: 0;
+        }
+        &::-moz-focus-outer {
+          outline-width: 0;
+        }
       }
-      &::-moz-placeholder {
-        color: $white-color;
-      }
-      &::-ms-input-placeholder {
-        color: $white-color;
-      }
-      &::-moz-placeholder {
-        color: $white-color;
-      }
-      &::-moz-focus-inner {
-        outline-width: 0;
-      }
-      &::-moz-focus-outer {
-        outline-width: 0;
+      button {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        color: #32373c;
+        display: block;
+        height: 20px;
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        text-shadow: none;
+        line-height: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        svg {
+          height: 100%;
+          width: 100%;
+          fill: $white-color;
+        }
       }
     }
   }

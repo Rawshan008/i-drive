@@ -29,7 +29,7 @@
 			</div>
 			<div class="footer-right">
 					<p><?php echo esc_html('Sign up for our Newsletter','i-dive'); ?></p>
-					<button  class="button subscribe"><?php echo esc_html('Subscribe', 'i-dive') ?></button>
+					<button  class="button subscribe"><img src="<?php echo get_template_directory_uri() . '/assets/img/icon-envelope-black.svg'?>"> <?php echo esc_html('Subscribe', 'i-dive') ?></button>
 			</div>
 			</div>
 		</div>
