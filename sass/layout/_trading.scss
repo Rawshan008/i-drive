@@ -5,6 +5,8 @@
     padding: 0;
     font-weight: 400;
     text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .trading-section-content {
     display: grid; 
@@ -13,6 +15,8 @@
     gap: 30px;
     height: 600px;
     padding: 50px 0px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     .single-trading-post  {
       position: relative;
