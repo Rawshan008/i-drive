@@ -389,6 +389,7 @@ img {
   display: flex;
   align-items: flex-end;
   color: #ffffff;
+  border-bottom: 4px solid #333E47;
 }
 .feature-section-content .single-feature-post::after {
   position: absolute;
@@ -399,6 +400,24 @@ img {
   content: "";
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
+}
+.feature-section-content .single-feature-post:hover::after {
+  background-color: #333E47;
+  opacity: 0.7;
+}
+.feature-section-content .single-feature-post.food {
+  border-color: rgb(247, 197, 70);
+}
+.feature-section-content .single-feature-post.food:hover::after {
+  background-color: rgb(247, 197, 70);
+  opacity: 0.5;
+}
+.feature-section-content .single-feature-post.education {
+  border-color: rgb(83, 183, 173);
+}
+.feature-section-content .single-feature-post.education:hover::after {
+  background-color: rgb(83, 183, 173);
+  opacity: 0.5;
 }
 .feature-section-content .single-feature-post .single-feature-meta {
   text-transform: uppercase;
@@ -466,6 +485,7 @@ img {
   display: flex;
   align-items: flex-end;
   color: #ffffff;
+  border-bottom: 4px solid #333E47;
 }
 .trading-section-wrapper .trading-section-content .single-trading-post::after {
   position: absolute;
@@ -476,6 +496,24 @@ img {
   content: "";
   background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
+}
+.trading-section-wrapper .trading-section-content .single-trading-post:hover::after {
+  background-color: #333E47;
+  opacity: 0.7;
+}
+.trading-section-wrapper .trading-section-content .single-trading-post.food {
+  border-color: rgb(247, 197, 70);
+}
+.trading-section-wrapper .trading-section-content .single-trading-post.food:hover::after {
+  background-color: rgb(247, 197, 70);
+  opacity: 0.5;
+}
+.trading-section-wrapper .trading-section-content .single-trading-post.education {
+  border-color: rgb(83, 183, 173);
+}
+.trading-section-wrapper .trading-section-content .single-trading-post.education:hover::after {
+  background-color: rgb(83, 183, 173);
+  opacity: 0.5;
 }
 .trading-section-wrapper .trading-section-content .single-trading-post .single-trading-meta {
   text-transform: uppercase;
@@ -551,7 +589,7 @@ img {
   display: flex;
   align-items: flex-end;
   color: #ffffff;
-  border-bottom: 4px solid #009791;
+  border-bottom: 4px solid #333E47;
 }
 .latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content::before {
   position: absolute;
@@ -564,8 +602,23 @@ img {
   z-index: -1;
   transition: 0.3s;
 }
-.latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content::hover::before {
-  background-color: #009791;
+.latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content:hover::before {
+  background-color: #333E47;
+  opacity: 0.7;
+}
+.latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content.food {
+  border-color: rgb(247, 197, 70);
+}
+.latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content.food:hover::before {
+  background-color: rgb(247, 197, 70);
+  opacity: 0.5;
+}
+.latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content.education {
+  border-color: rgb(83, 183, 173);
+}
+.latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content.education:hover::before {
+  background-color: rgb(83, 183, 173);
+  opacity: 0.5;
 }
 .latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content .single-latest-meta {
   text-transform: uppercase;

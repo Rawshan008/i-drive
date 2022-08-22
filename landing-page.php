@@ -98,17 +98,19 @@
           $feature_posts->the_post();
           $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
           $category = get_the_category(get_the_ID());
-
+          
+          $output_slug = [];
           $output_cat = [];
           foreach($category as $cat) {
             $output_cat[] = '<a href="'.esc_url(get_category_link($cat->term_id)).'">'.$cat->name .'</a>';
+            $output_slug[] = $cat->slug;
           }
 
         $post_meta = get_post_meta(get_the_ID(), '_i_dive_meta_key',  true);
 
     ?>
       
-    <div class="single-feature-post post-count-<?php echo $count;?>" style="background-image: url(<?php echo esc_url($feature_image);?>)">
+    <div class="single-feature-post <?php  echo implode(' ', $output_slug) ;?> post-count-<?php echo $count;?>" style="background-image: url(<?php echo esc_url($feature_image);?>)">
       <div class="single-feature-post-content">
         <div class="single-feature-meta">
           <span><?php echo $post_meta; ?> | </span>
@@ -167,16 +169,18 @@
           $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
           $category = get_the_category(get_the_ID());
 
+          $output_slug = [];
           $output_cat = [];
           foreach($category as $cat) {
             $output_cat[] = '<a href="'.esc_url(get_category_link($cat->term_id)).'">'.$cat->name .'</a>';
+            $output_slug[] = $cat->slug;
           }
 
         $post_meta = get_post_meta(get_the_ID(), '_i_dive_meta_key',  true);
 
     ?>
       
-    <div class="single-trading-post post-count-<?php echo $count;?>" style="background-image: url(<?php echo esc_url($feature_image);?>)">
+    <div class="single-trading-post <?php echo implode(' ', $output_slug); ?> post-count-<?php echo $count;?>" style="background-image: url(<?php echo esc_url($feature_image);?>)">
       <div class="single-trading-post-content">
         <div class="single-trading-meta">
           <span><?php echo $post_meta; ?> | </span>

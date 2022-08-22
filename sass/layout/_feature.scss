@@ -18,7 +18,7 @@
     display: flex;
     align-items: flex-end;
     color: $white-color;
-
+    border-bottom: 4px solid $dark-color;
     &::after {
       position: absolute;
       width: 100%;
@@ -28,6 +28,32 @@
       content: "";
       background-color: $overlay-color;
       z-index: -1;
+    }
+    &:hover {
+      &::after {
+        background-color: $dark-color;
+        opacity: 0.7;
+      }
+    }
+
+    &.food {
+      border-color: $food-color;
+      &:hover {
+        &::after {
+          background-color: $food-color;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &.education {
+      border-color: $education-color;
+      &:hover {
+        &::after {
+          background-color: $education-color;
+          opacity: 0.5;
+        }
+      }
     }
 
     .single-feature-meta {
