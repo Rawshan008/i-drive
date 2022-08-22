@@ -139,6 +139,8 @@ add_action( 'widgets_init', 'i_dive_widgets_init' );
  * Enqueue scripts and styles.
  */
 function i_dive_scripts() {
+	global $wp_query;
+
 	wp_enqueue_style( 'custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css');
 	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css');
 	wp_enqueue_style( 'i-dive-style', get_stylesheet_uri(), array(), _S_VERSION );
@@ -147,6 +149,14 @@ function i_dive_scripts() {
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'i-dive-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), _S_VERSION, true );
+
+	// Load More ajax
+	wp_localize_script('custom-scripts', 'ajax_posts', [
+		'ajaxurl' => admin_url('admin-ajax.php'),
+		'security'     => wp_create_nonce( 'load-more-posts' ),
+		'current_page' => $wp_query->query_vars['paged'] ? $wp_query->query_vars['paged'] : 1,
+		'max_page' => $wp_query->max_num_pages
+	]);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -202,3 +212,63 @@ function estimated_reading_time( $content = '' ) {
 
 	return $readingtime;
 }
+
+function ind_load_more_posts_callback() {
+	check_ajax_referer( 'load-more-posts', 'security' );
+  $paged = $_POST['page'] + 1;
+	$args = [
+		'post_type' => 'post',
+		'post_status' => 'publish',
+		'posts_per_page' => 3,
+		'orderby' =>  'date',
+    'order' => 'DESC',
+		'paged' => $paged,
+	];
+	
+	$latest_posts = new WP_Query( $args );
+
+	if($latest_posts->have_posts()):
+		while($latest_posts->have_posts()):
+			$latest_posts->the_post();
+			$feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
+			$category = get_the_category(get_the_ID());
+
+			$output_cat = [];
+			foreach($category as $cat) {
+				$output_cat[] = '<a href="'.esc_url(get_category_link($cat->term_id)).'">'.$cat->name .'</a>';
+			}
+
+		$post_meta = get_post_meta(get_the_ID(), '_i_dive_meta_key',  true);
+
+  ?>
+      
+    <div class="single-latest-post">
+      <div class="single-latest-post-content" style="background-image: url(<?php echo esc_url($feature_image);?>)">
+        <div class="single-latest__content">
+          <div class="single-latest-meta">
+            <span><?php echo $post_meta; ?> | </span>
+            <?php 
+              echo implode(' | ', $output_cat);
+            ?>
+          </div>
+          <h2><a href="<?php echo esc_url(get_the_permalink());?>"><?php the_title(); ?></a></h2>
+          <div class="single-latest-footer">
+            <span><?php echo estimated_reading_time(get_the_content()); ?> | </span>
+            <a href="<?php echo esc_url(get_the_permalink());?>"><?php echo esc_html('Read More', 'i-dive'); ?></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <?php
+        endwhile;
+				wp_reset_postdata();
+      endif;
+			wp_die();
+    ?>
+		<?php
+
+
+}
+add_action('wp_ajax_ind_load_more_posts', 'ind_load_more_posts_callback');
+add_action('wp_ajax_nopriv_ind_load_more_posts', 'ind_load_more_posts_callback');

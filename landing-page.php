@@ -210,15 +210,18 @@
     <h2 class="section-title"><?php echo esc_html('Latest Article', 'i-dive'); ?></h2>
     <div class="latest-section-content">
     <?php 
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $l_args = [
         'post_type' => 'post',
-        'posts_per_page' => 5,
+        'posts_per_page' => 6,
         'post_status' =>  'publish',
         'orderby' =>  'date',
         'order' => 'DESC',
+        'paged' => $paged,
       ];
 
       $latest_posts = new WP_Query($l_args);
+    
     ?>
 
     <?php 
@@ -263,7 +266,7 @@
       endif; 
     ?>
     </div>
-    <div class="loadmoore-btn"><button class="button">Load More</button></div>
+    <div class="loadmoore-btn"><button class="button loadmore-button">Load More</button></div>
   </div>
 </div>
 <!-- Feature Section End  -->
