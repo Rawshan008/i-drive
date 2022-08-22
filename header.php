@@ -43,7 +43,7 @@
 
 				<!-- subscribe button -->
 				<div class="header-subscribe-btn">
-						<button class="subscribe">Subscribe</button>
+						<button class="button subscribe">Subscribe</button>
 					</div>
 			</div>
 

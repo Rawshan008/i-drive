@@ -20,7 +20,12 @@
       flex: 0 0 25%;
       max-width: 100%;
       text-align: right;
-      @import '../components/buttons';
+      .button {
+        @extend .button;
+        font-weight: 400;
+        background-color: $primary-color;
+        color: $white-color;
+      }
     }
   }
   @import '../layout/navigation';

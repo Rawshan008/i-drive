@@ -12,19 +12,27 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'i-dive' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'i-dive' ), 'WordPress' );
+		<div class="ind-container">
+			<div class="footer-wrapper">
+			<div class="footer-left">
+				<?php 
+					wp_nav_menu(
+						array(
+							'theme_location' => 'footer-menu',
+							'menu_id'        => 'footer-menu',
+						)
+					);
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'i-dive' ), 'i-dive', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+				<div class="site-info">
+					<p><?php echo esc_html('Copyright @ 2022 all Right Reserve', 'i-dive') ?></p>
+				</div>
+			</div>
+			<div class="footer-right">
+					<p><?php echo esc_html('Sign up for our Newsletter','i-dive'); ?></p>
+					<button  class="button">Subscribe</button>
+			</div>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
