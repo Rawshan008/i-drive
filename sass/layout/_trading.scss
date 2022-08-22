@@ -1,3 +1,4 @@
+@import '../sass-utils/mixins';
 .trading-section-wrapper {
   .section-title {
     font-size: 30px;
@@ -17,6 +18,19 @@
     padding: 50px 0px;
     padding-left: 15px;
     padding-right: 15px;
+    @include medium {
+      height: 500px;
+    }
+    @include extrasmall {
+      height: auto;
+      display: block;
+      padding: 30px 15px;
+      padding-bottom: 0px;
+    }
+    
+    @include small {
+      display: grid;
+    }
 
     .single-trading-post  {
       position: relative;
@@ -30,6 +44,13 @@
       align-items: flex-end;
       color: $white-color;
       border-bottom: 4px solid $dark-color;
+      @include extrasmall {
+        margin-bottom: 20px;
+        min-height: 180px;
+      }
+      @include small {
+        margin-bottom: 0;
+      }
       &::after {
         position: absolute;
         width: 100%;
@@ -98,6 +119,9 @@
       grid-column-start: 1;
       grid-row-end: 3;
       grid-column-end: 2;
+      @include small {
+        grid-row-end: 2;
+      }
     }
   
     .post-count-2 {
@@ -105,6 +129,12 @@
       grid-column-start: 2;
       grid-row-end: 2;
       grid-column-end: 3;
+      @include small {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 2;
+      }
     }
   
     .post-count-3 {
@@ -112,6 +142,10 @@
       grid-column-start: 2;
       grid-row-end: 3;
       grid-column-end: 3;
+      @include small {
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
     }
   }
 }

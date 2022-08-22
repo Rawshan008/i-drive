@@ -1,3 +1,4 @@
+@import '../sass-utils/mixins';
 .banner-slider-wrapper  {
   .banner-section-container  {
     .single-banner-section {
@@ -13,6 +14,12 @@
       color: $white-color;
       padding-left: 15px;
       padding-right: 15px;
+      @include medium {
+        height: 450px;
+      }
+      @include extrasmall {
+        height: 300px;
+      }
       &::before {
         position: absolute;
         top: 0;

@@ -334,6 +334,16 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-slider-wrapper .banner-section-container .single-banner-section {
+    height: 450px;
+  }
+}
+@media (max-width: 767px) {
+  .banner-slider-wrapper .banner-section-container .single-banner-section {
+    height: 300px;
+  }
+}
 .banner-slider-wrapper .banner-section-container .single-banner-section::before {
   position: absolute;
   top: 0;
@@ -386,6 +396,23 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .feature-section-content {
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .feature-section-content {
+    height: auto;
+    display: block;
+    padding: 30px 15px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .feature-section-content {
+    display: grid;
+  }
+}
 .feature-section-content .single-feature-post {
   position: relative;
   z-index: 1;
@@ -398,6 +425,17 @@ img {
   align-items: flex-end;
   color: #ffffff;
   border-bottom: 4px solid #333E47;
+}
+@media (max-width: 767px) {
+  .feature-section-content .single-feature-post {
+    margin-bottom: 20px;
+    min-height: 180px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .feature-section-content .single-feature-post {
+    margin-bottom: 0px;
+  }
 }
 .feature-section-content .single-feature-post::after {
   position: absolute;
@@ -460,6 +498,11 @@ img {
   grid-row-end: 3;
   grid-column-end: 3;
 }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .feature-section-content .post-count-2 {
+    grid-row-end: 2;
+  }
+}
 .feature-section-content .post-count-3 {
   grid-row-start: 2;
   grid-column-start: 1;
@@ -486,6 +529,24 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .trading-section-wrapper .trading-section-content {
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .trading-section-wrapper .trading-section-content {
+    height: auto;
+    display: block;
+    padding: 30px 15px;
+    padding-bottom: 0px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .trading-section-wrapper .trading-section-content {
+    display: grid;
+  }
+}
 .trading-section-wrapper .trading-section-content .single-trading-post {
   position: relative;
   z-index: 1;
@@ -498,6 +559,17 @@ img {
   align-items: flex-end;
   color: #ffffff;
   border-bottom: 4px solid #333E47;
+}
+@media (max-width: 767px) {
+  .trading-section-wrapper .trading-section-content .single-trading-post {
+    margin-bottom: 20px;
+    min-height: 180px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .trading-section-wrapper .trading-section-content .single-trading-post {
+    margin-bottom: 0;
+  }
 }
 .trading-section-wrapper .trading-section-content .single-trading-post::after {
   position: absolute;
@@ -554,11 +626,24 @@ img {
   grid-row-end: 3;
   grid-column-end: 2;
 }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .trading-section-wrapper .trading-section-content .post-count-1 {
+    grid-row-end: 2;
+  }
+}
 .trading-section-wrapper .trading-section-content .post-count-2 {
   grid-row-start: 1;
   grid-column-start: 2;
   grid-row-end: 2;
   grid-column-end: 3;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .trading-section-wrapper .trading-section-content .post-count-2 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+  }
 }
 .trading-section-wrapper .trading-section-content .post-count-3 {
   grid-row-start: 2;
@@ -566,9 +651,20 @@ img {
   grid-row-end: 3;
   grid-column-end: 3;
 }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .trading-section-wrapper .trading-section-content .post-count-3 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
 
 .latest-section-wrapper {
   padding: 50px 0px;
+}
+@media (max-width: 767px) {
+  .latest-section-wrapper {
+    padding: 30px 0px;
+  }
 }
 .latest-section-wrapper .section-title {
   font-size: 30px;
@@ -588,6 +684,21 @@ img {
   flex: 0 0 auto;
   width: 33.33333333%;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .latest-section-wrapper .latest-section-content .single-latest-post {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .latest-section-wrapper .latest-section-content .single-latest-post {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .latest-section-wrapper .latest-section-content .single-latest-post {
+    width: 50%;
+  }
+}
 .latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content {
   position: relative;
   z-index: 1;
@@ -602,6 +713,11 @@ img {
   align-items: flex-end;
   color: #ffffff;
   border-bottom: 4px solid #333E47;
+}
+@media (max-width: 767px) {
+  .latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content {
+    min-height: 180px;
+  }
 }
 .latest-section-wrapper .latest-section-content .single-latest-post .single-latest-post-content::before {
   position: absolute;
@@ -669,12 +785,27 @@ img {
   padding-bottom: 80px;
   color: #ffffff;
 }
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 40px 0px;
+  }
+}
 .site-footer .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (max-width: 767px) {
+  .site-footer .footer-wrapper {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer .footer-left {
+    margin-bottom: 30px;
+  }
 }
 .site-footer .footer-left ul {
   margin: 0;
@@ -689,6 +820,11 @@ img {
 }
 .site-footer .footer-left .site-info {
   margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .site-footer .footer-left .site-info {
+    margin-top: 20px;
+  }
 }
 .site-footer .footer-left .site-info p {
   margin: 0;
@@ -705,4 +841,9 @@ img {
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .site-footer .footer-right p {
+    margin-bottom: 15px;
+  }
 }

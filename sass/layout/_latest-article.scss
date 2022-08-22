@@ -1,5 +1,9 @@
+@import '../sass-utils/mixins';
 .latest-section-wrapper {
   padding: 50px  0px;
+  @include extrasmall {
+    padding: 30px 0px;
+  }
   .section-title {
     font-size: 30px;
     margin: 0;
@@ -17,6 +21,17 @@
     .single-latest-post {
       flex: 0 0 auto;
       width: 33.33333333%;
+      @include medium {
+        width: 50%;
+      }
+
+      @include extrasmall {
+        width: 100%;
+      }
+
+      @include small {
+        width: 50%;
+      }
 
       .single-latest-post-content {
         position: relative;
@@ -32,6 +47,9 @@
         align-items: flex-end;
         color: $white-color;
         border-bottom: 4px solid $dark-color;
+        @include extrasmall {
+          min-height: 180px;
+        }
         &::before {
           position: absolute;
           top: 0;

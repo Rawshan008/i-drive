@@ -1,3 +1,5 @@
+@import '../sass-utils/mixins';
+
 .feature-section-content {
     display: grid; 
     grid-template-rows: 1fr 1fr;
@@ -7,6 +9,17 @@
     padding: 50px 0px;
     padding-left: 15px;
     padding-right: 15px;
+    @include medium {
+      height: 500px;
+    }
+    @include extrasmall {
+      height: auto;
+      display: block;
+      padding: 30px 15px;
+    }
+    @include small {
+      display: grid;
+    }
   .single-feature-post  {
     position: relative;
     z-index: 1;
@@ -19,6 +32,13 @@
     align-items: flex-end;
     color: $white-color;
     border-bottom: 4px solid $dark-color;
+    @include extrasmall {
+      margin-bottom: 20px;
+      min-height: 180px;
+    }
+    @include small {
+      margin-bottom: 0px;
+    }
     &::after {
       position: absolute;
       width: 100%;
@@ -94,6 +114,9 @@
     grid-column-start: 2;
     grid-row-end: 3;
     grid-column-end: 3;
+    @include small {
+      grid-row-end: 2;
+    }
   }
 
   .post-count-3 {

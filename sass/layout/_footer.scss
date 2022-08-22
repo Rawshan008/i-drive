@@ -1,8 +1,12 @@
+@import '../sass-utils/mixins';
 .site-footer {
   background-color: $dark-color;
   padding-top: 80px;
   padding-bottom: 80px;
   color: $white-color;
+  @include extrasmall {
+    padding: 40px 0px;
+  }
 
   .footer-wrapper {
     display: flex;
@@ -10,9 +14,15 @@
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
+    @include extrasmall {
+      display: block;
+    }
   }
 
   .footer-left {
+    @include extrasmall {
+      margin-bottom: 30px;
+    }
     ul {
       margin: 0;
       padding: 0;
@@ -28,7 +38,10 @@
       }
     }
     .site-info {
-      margin-top: 50px
+      margin-top: 50px;
+      @include extrasmall {
+        margin-top: 20px;
+      }
     }
     .site-info p {
       margin: 0;
@@ -45,6 +58,9 @@
       margin: 0;
       padding: 0;
       margin-bottom: 30px;
+      @include extrasmall {
+        margin-bottom: 15px;
+      }
     }
   }
 
