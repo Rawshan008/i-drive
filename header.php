@@ -22,6 +22,13 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+<div class="subscribe-form-wrapper">
+	<div class="close-btn">X</div>
+	<p><?php echo esc_html('Subscribe to our Newsletter', 'i-dive'); ?></p>
+	<input type="email" placeholder="Enter Your Email Address">
+	<input type="submit" value="Subscribe">
+</div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'i-dive' ); ?></a>
 
@@ -30,8 +37,9 @@
 			<div class="header-content">
 				<!-- header search  -->
 				<div class="header-search-form">
-					<form action="#">
-						<input type="text" placeholder="Search">
+					<form action="/" method="get">
+						<input placeholder="Search" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+						<input type="hidden" name="post">
 					</form>
 				</div>
 
@@ -60,8 +68,38 @@
 				?>
 			</nav><!-- #site-navigation -->
 		</div>
+	</div>
+	</header><!-- #masthead -->
+
+	<header id="masthead" class="site-header-2">
+		<div class="header-2-top-wrapper">
+			<div class="ind-container">
+				<div class="site-header-2-content">
+					<div class="site-header-2-logo">
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					</div>
+					<div class="site-header-2-menu">
+						<nav id="site-navigation" class="main-navigation">
+							<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'menu-1',
+										'menu_id'        => 'primary-menu',
+									)
+								);
+							?>
+						</nav><!-- #site-navigation -->
+					</div>
+				</div>
+			</div>
 		</div>
 		
-
-		
-	</header><!-- #masthead -->
+		<div class="header-2-search">
+			<div class="ind-container">
+				<form action="/" method="get">
+						<input placeholder="Search" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
+						<input type="hidden" name="post">
+				</form>
+			</div>
+		</div>
+	</header>

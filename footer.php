@@ -29,7 +29,7 @@
 			</div>
 			<div class="footer-right">
 					<p><?php echo esc_html('Sign up for our Newsletter','i-dive'); ?></p>
-					<button  class="button">Subscribe</button>
+					<button  class="button subscribe"><?php echo esc_html('Subscribe', 'i-dive') ?></button>
 			</div>
 			</div>
 		</div>

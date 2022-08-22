@@ -1,4 +1,11 @@
+@import '../components//subscribe';
 .site-header {
+  padding: 20px 0px;
+  &.menu-hide{
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
   .header-content {
     display: flex;
     flex-wrap: wrap;
@@ -29,4 +36,98 @@
     }
   }
   @import '../layout/navigation';
+}
+
+
+.site-header-2 {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99999; 
+  position: fixed;
+  width:100%;    
+  top: 0;
+  -webkit-transition: all 0.75s ease-out;
+  -moz-transition: all 0.75s ease-out;
+  -ms-transition: all 0.75s ease-out;
+  -o-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
+
+  &.header-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header-2-top-wrapper {
+    background-color: $white-color;
+    padding: 10px 0px;
+    .site-header-2-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+  
+      .site-header-2-logo {
+        h1 {
+          margin: 0;
+          padding: 0;
+          a {
+              color: $text-color;
+              text-transform: uppercase;
+            }
+          }
+        }
+        
+      .site-header-2-menu {
+       ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: end;
+        li {
+          margin-left: 20px;
+          a {
+            color: $text-color;
+          }
+        }
+       }
+      }
+    }
+  }
+  
+
+  .header-2-search {
+    background-color: $primary-color;
+    padding: 5px 0px;
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 9px 10px;
+      border: none;
+      background-color: transparent;
+      color: $white-color;
+
+      &::-webkit-input-placeholder {
+        color: $white-color;
+      }
+      &::-moz-placeholder {
+        color: $white-color;
+      }
+      &::-ms-input-placeholder {
+        color: $white-color;
+      }
+      &::-moz-placeholder {
+        color: $white-color;
+      }
+      &::-moz-focus-inner {
+        outline-width: 0;
+      }
+      &::-moz-focus-outer {
+        outline-width: 0;
+      }
+    }
+  }
+}
+
+.admin-bar .site-header-2{ 
+  top: 32px;    
 }
