@@ -13,6 +13,6 @@ requires the following dependencies:
 ```sh
 $ composer install
 $ yarn
-$ npm watch
-$ npm prod
+$ yarn watch
+$ yarn prod
 ```
