@@ -293,6 +293,7 @@ img {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 .site-header .header-content .header-site-meta h1 a {
   text-decoration: none;
