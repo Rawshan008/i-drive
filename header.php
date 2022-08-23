@@ -37,7 +37,7 @@
 			<div class="header-content">
 				<!-- header search  -->
 				<div class="header-search-form">
-					<form action="/" method="get">
+					<form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 						<input placeholder="Search" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
 						<button type="submit">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -100,7 +100,7 @@
 		
 		<div class="header-2-search">
 			<div class="ind-container">
-				<form action="/" method="get">
+				<form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 						<input placeholder="Search" type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
 						<button type="submit">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
