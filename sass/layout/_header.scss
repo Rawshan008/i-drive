@@ -1,6 +1,11 @@
 @import '../components//subscribe';
+@import 'mobile-menu';
+@import '../sass-utils/mixins';
 .site-header {
   padding: 20px 0px;
+  @include small {
+    display: none;
+  }
   &.menu-hide{
     opacity: 0;
     display: none;
@@ -84,7 +89,9 @@
   -ms-transition: all 0.75s ease-out;
   -o-transition: all 0.75s ease-out;
   transition: all 0.75s ease-out;
-
+  @include small {
+    display: none;
+  }
   &.header-show {
     opacity: 1;
     visibility: visible;

@@ -63,6 +63,18 @@
       }
     })
 
+
+    // Mobile Menu 
+    $(".mobile-menu-icon button").on("click", function() {
+      $(".mobile-menu-items").addClass('show-menu');
+      $(".mobile-menu-items-overlay").addClass('show-overlay');
+    });
+
+    $(".mobile-menu-close-btn button, .mobile-menu-items-overlay").on("click", function() {
+      $(".mobile-menu-items").removeClass('show-menu');
+      $(".mobile-menu-items-overlay").removeClass('show-overlay');
+    });
+
   });
 
 
