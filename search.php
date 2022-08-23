@@ -33,19 +33,21 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				$feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
+					$feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'full');
           $category = get_the_category(get_the_ID());
 
           $output_cat = [];
+					$output_slug = [];
           foreach($category as $cat) {
             $output_cat[] = '<a href="'.esc_url(get_category_link($cat->term_id)).'">'.$cat->name .'</a>';
+						$output_slug[] = $cat->slug;
           }
 
         	$post_meta = get_post_meta(get_the_ID(), '_i_dive_meta_key',  true);
 				?>
 
 				<div class="single-latest-post">
-					<div class="single-latest-post-content" style="background-image: url(<?php echo esc_url($feature_image);?>)">
+					<div class="single-latest-post-content <?php  echo implode(' ', $output_slug) ;?>" style="background-image: url(<?php echo esc_url($feature_image);?>)">
 						<div class="single-latest__content">
 							<div class="single-latest-meta">
 								<span><?php echo $post_meta; ?> | </span>
