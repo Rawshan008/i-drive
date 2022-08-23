@@ -34,6 +34,10 @@
         a {
           color: $white-color;
           margin-right: 20px;
+          transition: 0.3s;
+          &:hover {
+            color: $primary-color;
+          }
         }
       }
     }

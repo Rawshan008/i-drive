@@ -203,6 +203,10 @@ img {
 .mobile-menu-items .mobile-navigation ul a {
   padding: 10px;
   display: block;
+  transition: 0.3s;
+}
+.mobile-menu-items .mobile-navigation ul a:hover {
+  color: #009791;
 }
 
 .mobile-menu-items-overlay {
@@ -330,6 +334,10 @@ img {
   display: inline-block;
   padding: 10px;
   color: #5a5a5a;
+  transition: 0.3s;
+}
+.site-header .header-menu ul a:hover {
+  color: #009791;
 }
 
 .site-header-2 {
@@ -382,6 +390,10 @@ img {
 }
 .site-header-2 .header-2-top-wrapper .site-header-2-content .site-header-2-menu ul li a {
   color: #5a5a5a;
+  transition: 0.3s;
+}
+.site-header-2 .header-2-top-wrapper .site-header-2-content .site-header-2-menu ul li a:hover {
+  color: #009791;
 }
 .site-header-2 .header-2-search {
   background-color: #009791;
@@ -962,6 +974,10 @@ img {
 .site-footer .footer-left ul li a {
   color: #ffffff;
   margin-right: 20px;
+  transition: 0.3s;
+}
+.site-footer .footer-left ul li a:hover {
+  color: #009791;
 }
 .site-footer .footer-left .site-info {
   margin-top: 50px;
