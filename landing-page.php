@@ -28,7 +28,7 @@
     <?php if($banner_posts->have_posts()): ?>
       <?php 
         while($banner_posts->have_posts()): $banner_posts->the_post(); 
-        $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
+        $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'full');
         $category = get_the_category(get_the_ID());
 
         $output_cat = [];
@@ -96,7 +96,7 @@
         $count = 1;
         while($feature_posts->have_posts()):
           $feature_posts->the_post();
-          $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
+          $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'full');
           $category = get_the_category(get_the_ID());
           
           $output_slug = [];
@@ -166,7 +166,7 @@
         $count = 1;
         while($tranding_posts->have_posts()):
           $tranding_posts->the_post();
-          $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
+          $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'full');
           $category = get_the_category(get_the_ID());
 
           $output_slug = [];
@@ -233,7 +233,7 @@
         $count = 1;
         while($latest_posts->have_posts()):
           $latest_posts->the_post();
-          $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
+          $feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'full');
           $category = get_the_category(get_the_ID());
 
           $output_cat = [];

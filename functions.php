@@ -230,7 +230,7 @@ function ind_load_more_posts_callback() {
 	if($latest_posts->have_posts()):
 		while($latest_posts->have_posts()):
 			$latest_posts->the_post();
-			$feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()));
+			$feature_image = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'full');
 			$category = get_the_category(get_the_ID());
 
 			$output_cat = [];
