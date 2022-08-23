@@ -234,8 +234,10 @@ function ind_load_more_posts_callback() {
 			$category = get_the_category(get_the_ID());
 
 			$output_cat = [];
+			$output_slug = [];
 			foreach($category as $cat) {
 				$output_cat[] = '<a href="'.esc_url(get_category_link($cat->term_id)).'">'.$cat->name .'</a>';
+				$output_slug[] = $cat->slug;
 			}
 
 		$post_meta = get_post_meta(get_the_ID(), '_i_dive_meta_key',  true);
@@ -243,7 +245,7 @@ function ind_load_more_posts_callback() {
   ?>
       
     <div class="single-latest-post">
-      <div class="single-latest-post-content" style="background-image: url(<?php echo esc_url($feature_image);?>)">
+      <div class="single-latest-post-content <?php  echo implode(' ', $output_slug) ;?>" style="background-image: url(<?php echo esc_url($feature_image);?>)">
         <div class="single-latest__content">
           <div class="single-latest-meta">
             <span><?php echo $post_meta; ?> | </span>
