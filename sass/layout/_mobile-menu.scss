@@ -3,7 +3,7 @@
   background-color: $white-color;
   padding: 10px 0px;
   display: none;
-  @include small {
+  @include extrasmall {
     display: block;
   }
   .mobile-menu-wrapper {
@@ -52,7 +52,7 @@
   &.show-menu {
     right: 0;
   }
-  @include small {
+  @include extrasmall {
     display: block;
   }
   .mobile-menu-close-btn  {
@@ -109,7 +109,7 @@
     opacity: 0.6;
     visibility: visible;
   }
-  @include small {
+  @include extrasmall {
     display: block;
   }
 }

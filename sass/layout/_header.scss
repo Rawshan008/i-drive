@@ -3,7 +3,7 @@
 @import '../sass-utils/mixins';
 .site-header {
   padding: 20px 0px;
-  @include small {
+  @include extrasmall {
     display: none;
   }
   &.menu-hide{
@@ -89,7 +89,7 @@
   -ms-transition: all 0.75s ease-out;
   -o-transition: all 0.75s ease-out;
   transition: all 0.75s ease-out;
-  @include small {
+  @include extrasmall {
     display: none;
   }
   &.header-show {
