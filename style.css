@@ -664,6 +664,15 @@ img {
   grid-column-end: 2;
 }
 
+.feature-section-wrapper {
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .feature-section-wrapper {
+    margin-bottom: 0px;
+  }
+}
+
 .trading-section-wrapper .section-title {
   font-size: 30px;
   margin: 0;

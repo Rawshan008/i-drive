@@ -129,3 +129,11 @@
     grid-column-end: 2;
   }
 }
+
+.feature-section-wrapper {
+  margin-bottom: 40px;
+
+  @include extrasmall {
+    margin-bottom: 0px;
+  }
+}
