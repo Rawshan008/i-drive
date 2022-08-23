@@ -331,8 +331,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .banner-slider-wrapper .banner-section-container .single-banner-section {
@@ -357,6 +355,8 @@ img {
 .banner-slider-wrapper .banner-section-container .single-banner-section .single-post-meta {
   text-transform: uppercase;
   margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .banner-slider-wrapper .banner-section-container .single-banner-section .single-post-meta a {
   color: #ffffff;
@@ -366,12 +366,27 @@ img {
   padding: 0;
   margin-bottom: 20px;
   font-weight: 700;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 50px;
 }
 .banner-slider-wrapper .banner-section-container .single-banner-section h2 a {
   color: #ffffff;
 }
+@media (max-width: 767px) {
+  .banner-slider-wrapper .banner-section-container .single-banner-section h2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .banner-slider-wrapper .banner-section-container .single-banner-section h2 {
+    font-size: 30px;
+  }
+}
 .banner-slider-wrapper .banner-section-container .single-banner-section .single-post-footer {
   text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .banner-slider-wrapper .banner-section-container .single-banner-section .single-post-footer a {
   color: #ffffff;
@@ -497,6 +512,9 @@ img {
   grid-column-start: 2;
   grid-row-end: 3;
   grid-column-end: 3;
+}
+.feature-section-content .post-count-2 h2 {
+  font-size: 30px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .feature-section-content .post-count-2 {
@@ -625,6 +643,9 @@ img {
   grid-column-start: 1;
   grid-row-end: 3;
   grid-column-end: 2;
+}
+.trading-section-wrapper .trading-section-content .post-count-1 h2 {
+  font-size: 30px;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .trading-section-wrapper .trading-section-content .post-count-1 {
